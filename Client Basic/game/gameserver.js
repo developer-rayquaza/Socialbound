@@ -121,7 +121,7 @@ module.exports = class GameServer {
                 updateCount = 0;
             }
         }, 1000 / this.ups);
-        Logger.normal('' + this.id + ' created (capacity: ' + this.maxPlayers + ' players).');
+        // Logger.normal('' + this.id + ' created (capacity: ' + this.maxPlayers + ' players).');
     }
 
     pushToAccount(account, message) {

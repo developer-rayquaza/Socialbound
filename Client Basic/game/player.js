@@ -117,8 +117,7 @@ module.exports = class player {
     setShield(a) {
         this.shield = a;
     }
-
-    disHpShield(hp, sh) {
+    discountHpAndShield(hp, sh) {
         this.hp = this.hp - hp;
         this.shield = this.shield - sh;
     }

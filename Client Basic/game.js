@@ -23,7 +23,6 @@ server.onConnect(function (connection) {
     }
 });
 game.run();
-
 server.onError(function () {
     Logger.log('Error Server');
 });
@@ -31,7 +30,6 @@ server.onError(function () {
 process.on('uncaughtException', function (e) {
     Logger.error('uncaughtException: ' + e.stack);
 });
-
 function keepAlive() {
     self.db.connection.getConnection().then(conn => {
         conn.query('SELECT 1', [])

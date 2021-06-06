@@ -30,6 +30,7 @@ module.exports = class Shoot {
         this.under = null;
         this.bounce = null;
         this.damage = 0;
+        this.damageshot = 100;
         this.angleAtTime = null;
         this.ss = type == 2 ? 1 : null;
         this.is_lightning = null;

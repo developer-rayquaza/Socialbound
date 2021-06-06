@@ -57,7 +57,18 @@ Logger.debug = function(str) {
 Logger.error = function(str) {
     this.write(4, str);
 };
-
+Logger.green = function(str){
+    this.write(5, str);
+}
+Logger.blue = function(str){
+    this.write(6, str);
+}
+Logger.white = function(str){
+    this.write(7, str);
+}
+Logger.br = function(str){
+    this.write(6, "");
+}
 Logger.sql = function(str) {
     logFile.write(str.sql + '\n');
 };
@@ -72,7 +83,17 @@ Logger.write = function(type, str) {
         console.log(colors.fg.Yellow, '[ INFO   ]: ' + str, colors.Reset);
     } else if (type == 3) {
         console.log(colors.fg.Red, '[ DEBUG  ]: ' + str, colors.Reset);
-    } else {
+    } 
+    else if(type === 5){
+        console.log(colors.fg.Green, str, colors.Reset);
+    }
+    else if(type === 6){
+        console.log(colors.fg.Blue, str, colors.Reset);
+    }   
+    else if(type === 7){
+        console.log(colors.fg.White, str, colors.Reset);
+    }   
+    else {
         console.log(colors.fg.Red, '[ ERROR  ]: ' + str, colors.Reset);
     }
 };

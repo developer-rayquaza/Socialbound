@@ -317,7 +317,7 @@ Types = {
         excellent_shot: 6,
         good_shot: 7,
         shot_bonus: 8,
-        team_damage_penalty: 9,
+        team_damage_penalty: 9, // 
         killed_by_sd: 10,
         died_by_tele: 11,
         damage_1000: 12,
@@ -327,14 +327,15 @@ Types = {
         double_kill: 16,
         ending_bonus: 17,
         bunge_bonus: 18,
-        suicide_penalty: 19,
+        suicide_penalty: 19, //
         unlocked_challenge: 20,
         free_kill_detected: 21,
-        suicide_penalty_bunge: 22,
-        team_kill_penalty: 23,
+        suicide_penalty_bunge: 22, //
+        team_kill_penalty: 23, //
         winning_change: 24,
         early_suicide: 25,
         blocked_winning: 26,
+        score_change: 27 
     },
 
     ALERT2_TYPES: {

@@ -145,7 +145,7 @@ module.exports = Map = cls.Class.extend({
             .on('error', function () {
                 Logger.error("Map Error: " + self.id);
             });
-            Logger.log(`Load Map [${this.info.Name}]`);
+            // Logger.log(`Load Map [${this.info.Name}]`);
     },
 
     RadToAngle: function (a) {
