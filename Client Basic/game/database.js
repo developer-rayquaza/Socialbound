@@ -948,4 +948,38 @@ module.exports = class DataBase {
             });
         });
     }
+
+
+    // Version 120
+    getCheckName(game_id){
+        var self = this;
+        const sql = 'SELECT count(*) as count FROM accounts WHERE BINARY Username = ?';
+        const params = [game_id];
+        const types = {
+            error: 'Bad Name',
+            exist: 'Name Exists',
+            ok: 'OK'
+        }
+        return new Promise(async function(res, rej){
+            const db = await self.connection.getConnection();
+            const query = db.query(sql, params);
+            const rows = await query;
+            const result = rows[0][0].count;
+            db.release();
+
+            let response = types.error;
+
+            if(game_id.length > 10){
+                response = types.error;
+            }
+            else if(result === 1){
+                response = types.exist;
+            }
+            else if(result === 0){
+                response = types.ok
+            }
+            return res(response);
+        });
+    }  
 };
+

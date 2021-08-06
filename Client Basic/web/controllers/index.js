@@ -13,6 +13,7 @@ router.use('/guild', require('./guild'));*/
 router.use('/user', require('./user'));
 router.use('/api', require('./api'));
 router.use('/f', require('./facebook'));
+router.use('/checkName', require('./checkName'));
 /*router.use('/settings', require('./userctl.js'));*/
 
 router.get('/', function (req, res) {
